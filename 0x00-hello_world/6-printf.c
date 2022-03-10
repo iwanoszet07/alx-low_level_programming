@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - Entry ponit
+ *
+ * Retur: Always 0 (successs)
+ */
 int main(void)
 {
 	int ii;
