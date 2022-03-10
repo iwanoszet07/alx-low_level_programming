@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - Entry ponit
+ * main - Entery ponit
  *
- * Retur: Always 0 (successs)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
