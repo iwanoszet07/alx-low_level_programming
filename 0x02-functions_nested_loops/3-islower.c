@@ -1,21 +1,20 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - Mtd to be implement
+ * _islower - mtd name to implement
  * Description: function uses _putchar function to print
  * alphabet in lowercase 10 times
- * Return: Nthg.
+ * Return: 1 if is lowercase or 0 if is uppercase
  */
-
-void print_alphabet_x10(void)
+int _islower(int c)
 {
 	char i;
-	int j;
+	int lower = 0;
 
-	for (j = 0; j < 10; j++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		for (i = 'a'; i <= 'z'; i++)
-			_putchar(i);
-		_putchar('\n');
+		if (i == c)
+			lower = 1;
 	}
-}
 
+	return (lower);
+}
