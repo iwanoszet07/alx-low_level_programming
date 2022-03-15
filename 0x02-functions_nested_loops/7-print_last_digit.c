@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_last_digit - mtd name for impliment 
  * @r: An integer input
