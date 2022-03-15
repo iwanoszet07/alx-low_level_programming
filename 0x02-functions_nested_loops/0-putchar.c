@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - mtd name to impliment
  * Description: It print using putchar, followed by a new line.
