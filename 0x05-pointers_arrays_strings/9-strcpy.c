@@ -1,4 +1,3 @@
-#include "main.h"
 
 /**
  * _strcpy - mtd name to impliment task 9,
