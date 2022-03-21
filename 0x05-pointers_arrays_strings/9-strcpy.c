@@ -1,3 +1,4 @@
+#include "main.h"
 
 /**
  * _strcpy - mtd name to impliment task 9,
@@ -8,11 +9,13 @@
  *
  * Return: pointer to dest
  */
+
 char *_strcpy(char *dest, char *src)
 {
-	char *aux = dest;
+int i;
 
-	while (*src)
-		*dest++ = *src++;
-	return (aux);
+for (i = 0; src[i]; i++)
+dest[i] = src[i];
+dest[i] = src[i];
+return (dest);
 }
