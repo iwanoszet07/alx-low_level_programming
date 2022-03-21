@@ -6,14 +6,15 @@
  * @str: an input string
  * Return: Nothing
  */
+
 void _puts(char *str)
 {
 	int i = 0;
 
 	while (str[i] != '\0')
 	{
-               printf("%d", str[i]);
+		_putchar(str[i]);
 		i++;
 	}
-	printf('\n');
+	_putchar('\n');
 }
