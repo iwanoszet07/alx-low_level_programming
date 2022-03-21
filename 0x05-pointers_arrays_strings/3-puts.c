@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - mtd name to implement
+ * _puts - mtd name to implement task 3
  * by a new line, to stdout.
  * @str: an input string
  * Return: Nothing
@@ -12,8 +12,8 @@ void _puts(char *str)
 
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
+               printf("%d", str[i]);
 		i++;
 	}
-	_putchar('\n');
+	printf('\n');
 }
