@@ -1,13 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _atoi -mtd name to impliment task 10 
- * @s: An input string
- *
- * Return: integer value
- */
-
+* _atoi - mtd name to impliment task 10
+* @s: string to convert
+*
+* Return: value of integer
+*/
 
 int _atoi(char *s)
 {
