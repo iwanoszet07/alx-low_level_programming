@@ -1,0 +1,1 @@
+Static_libraries project basics
