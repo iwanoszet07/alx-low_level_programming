@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid -function name to impliment task 4.
+ * free_grid - A function that frees a 2D array of ints previously
  * created by your malloc_grid function
  * @grid: An input 2D array of integers to free
  * @height: height of grid

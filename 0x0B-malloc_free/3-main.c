@@ -12,20 +12,20 @@
  */
 void print_grid(int **grid, int width, int height)
 {
-    int w;
-    int h;
+  int w;
+  int h;
 
-    h = 0;
-    while (h < height)
+  h = 0;
+  while (h < height)
     {
-        w = 0;
-        while (w < width)
+      w = 0;
+      while (w < width)
         {
-            printf("%d ", grid[h][w]);
-            w++;
+	  printf("%d ", grid[h][w]);
+	  w++;
         }
-        printf("\n");
-        h++;
+      printf("\n");
+      h++;
     }   
 }
 
@@ -36,17 +36,17 @@ void print_grid(int **grid, int width, int height)
  */
 int main(void)
 {
-    int **grid;
+  int **grid;
 
-    grid = alloc_grid(6, 4);
-    if (grid == NULL)
+  grid = alloc_grid(6, 4);
+  if (grid == NULL)
     {
-        return (1);
+      return (1);
     }
-    print_grid(grid, 6, 4);
-    printf("\n");
-    grid[0][3] = 98;
-    grid[3][4] = 402;
-    print_grid(grid, 6, 4);
-    return (0);
+  print_grid(grid, 6, 4);
+  printf("\n");
+  grid[0][3] = 98;
+  grid[3][4] = 402;
+  print_grid(grid, 6, 4);
+  return (0);
 }

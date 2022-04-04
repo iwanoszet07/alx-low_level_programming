@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - function name to impliment task 3.
+ * alloc_grid - Returns a pointer to a 2-dimensional array of
+ *               integers with each element initalized to 0.
  * @width: The width of the 2-dimensional array.
  * @height: The height of the 2-dimensional array.
  *

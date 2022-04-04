@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat - function name to impliment task 2.
+ * str_concat - A function that concatenates two strings
  * @s1: An input pointer of the first string
  * @s2: An input pointer of the second string
  * Return: Apointer to concatened strings or NULL if it str is NULL

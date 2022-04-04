@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - function name to impliment task 0,
+ * create_array - A function that creates an array of chars,
  * and initializes it with a specific char.
  * @size: The size of the array
  * @c: A character to initialized the array
