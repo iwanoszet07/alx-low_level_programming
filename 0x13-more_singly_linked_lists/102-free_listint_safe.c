@@ -1,45 +1,65 @@
-#include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * free_listint_safe - A function that frees a list
- * @h: A pointer listint_t structure
- * Return: The size of the list that was free'd
- */
-size_t free_listint_safe(listint_t **h)
+* _realloc_mem - reallocates memory for an array of pointers
+* to the nodes in a linked list
+* @list: the old list
+* @size: size of the new list
+* @new_elm: new node
+*
+* Return: pointer to the new list
+*/
+listint_t **_realloc_mem(listint_t **list, size_t size, listint_t *new_elm)
 {
-	size_t counter = 0;
-	listint_t *temp;
+listint_t **new_list;
+size_t i;
 
-	temp = *h;
-	while (temp)
-	{
-		temp = *h;
-		temp = temp->next;
-		free_list(temp);
-		counter++;
-	}
-	*h = NULL;
-
-	return (counter);
+new_list = malloc(size * sizeof(listint_t *));
+if (new_list == NULL)
+{
+free(list);
+exit(98);
+}
+for (i = 0; i < size - 1; i++)
+new_list[i] = list[i];
+new_list[i] = new_elm;
+free(list);
+return (new_list);
 }
 
 /**
- * free_list - A function that frees a listint_t recursively
- * @head: A pointer to the listint_t structure
- * Return: Nothing
- */
-void free_list(listint_t *head)
+* free_listint_safe - frees a listint_t linked list.
+* @head: double pointer to the start of the list
+*
+* Return: the number of nodes in the list
+*/
+size_t free_listint_safe(listint_t **head)
 {
-	listint_t *temp;
+size_t i, count = 0;
+listint_t **list = NULL;
+listint_t *next;
 
-	if (head)
-	{
-		temp = head;
-		temp = temp->next;
-		free(temp);
-		free_list(temp);
-	}
-	free(head);
+if (head == NULL || *head == NULL)
+return (count);
+while (*head != NULL)
+{
+for (i = 0; i < count; i++)
+{
+if (*head == list[i])
+{
+*head = NULL;
+free(list);
+return (count);
+}
+}
+count++;
+list = _realloc_mem(list, count, *head);
+next = (*head)->next;
+free(*head);
+*head = next;
+}
+free(list);
+return (count);
 }
